@@ -56,7 +56,7 @@ var purchasePrompt = function() {
             } else{
                 connection.query(`UPDATE products SET stock_quantity = ${stock-=qty} WHERE item_id=${id}`, function(err){
                     if(err) throw err;
-                    console.log("Purchase went through\nTotal: $" + response[0].price);
+                    console.log("Purchase went through\nTotal: $" + (response[0].price * qty));
                     connection.end();
                 })
             }
