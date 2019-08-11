@@ -1,1 +1,1 @@
-# bamazon_db
+# liri-node-app
